@@ -1,0 +1,28 @@
+includes:
+    - phpstan-baseline.neon
+parameters:
+    level: max
+    paths:
+        - app
+        - public
+        - src
+        - tests
+    scanFiles:
+        - app/constants.php
+        - examples/signon-script.php
+    bootstrapFiles:
+        - tests/phpstan-constants.php
+    stubFiles:
+        - tests/stubs/uploadprogress.stub
+    excludePaths:
+        - app/cache/*
+        - tests/doctum-config.php
+    dynamicConstantNames:
+        - ROOT_PATH
+        - TEST_PATH
+        - VERSION_SUFFIX
+    checkBenevolentUnionTypes: true
+    checkUninitializedProperties: true
+    checkDynamicProperties: true
+    checkTooWideReturnTypesInProtectedAndPublicMethods: true
+    checkImplicitMixed: true

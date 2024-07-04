@@ -1,0 +1,38 @@
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-recommended-scss"
+    ],
+    "rules": {
+        "selector-class-pattern": null,
+        "import-notation": null,
+        "selector-attribute-quotes": null,
+        "shorthand-property-no-redundant-values": null,
+        "function-url-quotes": null,
+        "selector-id-pattern": null,
+        "alpha-value-notation": null,
+        "color-function-notation": null,
+        "scss/no-global-function-names": null,
+        "scss/function-quote-no-quoted-strings-inside": null,
+        "property-no-vendor-prefix": null,
+        "declaration-block-no-redundant-longhand-properties": null,
+        "no-descending-specificity": null,
+        "no-duplicate-selectors": null,
+        "at-rule-empty-line-before": ["always", {
+            "except": [
+                "blockless-after-same-name-blockless",
+                "first-nested"
+            ],
+            "ignore": ["after-comment"],
+            "ignoreAtRules": ["else"]
+        }],
+        "value-keyword-case": [
+            "lower",
+            {
+                "ignoreProperties": [
+                    "$font-family-monospace"
+                ]
+            }
+        ]
+    }
+}

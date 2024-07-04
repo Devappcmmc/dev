@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.1/phpunit.xsd"
+  bootstrap="tests/bootstrap-dist.php"
+  cacheDirectory="build/.phpunit.cache"
+  executionOrder="random"
+  defaultTestSuite="unit"
+  failOnRisky="true"
+  failOnWarning="true"
+  displayDetailsOnTestsThatTriggerWarnings="true"
+  displayDetailsOnTestsThatTriggerNotices="true"
+  displayDetailsOnTestsThatTriggerErrors="true"
+  displayDetailsOnTestsThatTriggerDeprecations="false"
+  displayDetailsOnIncompleteTests="true"
+  requireCoverageMetadata="true"
+  beStrictAboutOutputDuringTests="true"
+  colors="true"
+>
+  <source>
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+  </source>
+  <coverage>
+    <report>
+      <clover outputFile="build/logs/clover.xml"/>
+      <xml outputDirectory="build/logs/coverage-xml"/>
+    </report>
+  </coverage>
+  <php>
+    <env name="LC_ALL" value="C.UTF8" force="true"/>
+  </php>
+  <testsuites>
+    <testsuite name="unit">
+      <directory suffix="Test.php">tests/unit</directory>
+    </testsuite>
+    <testsuite name="end-to-end">
+      <directory suffix="Test.php">tests/end-to-end</directory>
+    </testsuite>
+  </testsuites>
+  <logging>
+    <junit outputFile="build/logs/junit.xml"/>
+  </logging>
+</phpunit>
