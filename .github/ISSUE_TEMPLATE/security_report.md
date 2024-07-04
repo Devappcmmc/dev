@@ -1,6 +1,9 @@
 ---
 name: Security report
 about: Disclose a security vulnerability responsibly by first reporting it to us privately
+title: ''
+labels: ''
+assignees: ''
 
 ---
 
